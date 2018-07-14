@@ -1,22 +1,33 @@
 package arrays2;
 
+import java.util.Scanner;
+
 public class Array {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        int[] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i * 3;
+        int[] order = getOrder(2);
+        for(int i = 0; i<order.length; i++){
+            System.out.println("jus ivedete " + order[i]);
         }
-        for (int i = 0; i < array.length; i++) {
-                System.out.println("element " + i + " value " + array[i]);
+    }
+
+    public static int[] getOrder (int number) {
+        System.out.println("Iveskite " + number + " skaicius " + "\r");
+        int[] value = new int[number];
+
+        for (int i = 0; i < value.length; i++) {
+            value[i] = scanner.nextInt();
         }
+        return value;
     }
 }
 /*
 output
-element 0 value 0
-element 1 value 3
-element 2 value 6
-element 3 value 9
-element 4 value 12
+Iveskite 2 skaicius
+4                       //ivedam pirma skaiciu
+8                       //ivedam antra skaiciu
+jus ivedete 4
+jus ivedete 8
  */
