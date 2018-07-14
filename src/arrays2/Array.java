@@ -11,6 +11,7 @@ public class Array {
         for(int i = 0; i<order.length; i++){
             System.out.println("jus ivedete " + order[i]);
         }
+        System.out.println("Skaiciu vidurkis yra: " + getAverage(order));
     }
 
     public static int[] getOrder (int number) {
@@ -22,12 +23,21 @@ public class Array {
         }
         return value;
     }
+
+    public static double getAverage (int[] array){
+        int sum = 0;
+        for(int i=0; i<array.length; i++){
+            sum += array[i];
+        }
+        return (double)sum/(double)array.length;
+    }
 }
 /*
 output
 Iveskite 2 skaicius
-4                       //ivedam pirma skaiciu
-8                       //ivedam antra skaiciu
-jus ivedete 4
+8
+7
 jus ivedete 8
+jus ivedete 7
+Skaiciu vidurkis yra: 7.5
  */
