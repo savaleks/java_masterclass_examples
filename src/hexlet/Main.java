@@ -6,13 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Car.Speed();
+        try {
+            Car.Speed();
+        } catch (Exception e) {
+            System.out.println("Wrong input");
+        }
     }
 }
 
 class  Car {
 
-    public static double Speed () {
+    public static double Speed () throws Exception {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input distance, m: ");
@@ -20,31 +24,17 @@ class  Car {
         System.out.println("Input time, s: ");
         int time = scanner.nextInt();
 
-        double speed = (double) (length/time);
+        double speed = (double) (length/time)*3.6;
 
-        System.out.println("Your speed is " + (speed * 3.6) + " km/h.");
+        System.out.println("Your speed is " + (speed) + " km/h.");
 
         if (speed<= 20){
-            System.out.println("too slow");
-            if (length < 1000){
-                System.out.println("distance too short, measure not precise");
-            } else {
-                System.out.println("up your speed!");
-            }
-        } else {
+            System.out.println("too slow \nup your speed!");
+        } else if (speed < 40) {
+            System.out.println("your speed correct");
+        } else if (speed >= 40){
             System.out.println("too fast, slow down!");
         }
         return speed;
     }
 }
-
-/*
-output
-Input distance, m:
-800
-Input time, s:
-62
-Your speed is 43.2 km/h.
-too slow
-distance too short, measure not precise
- */
