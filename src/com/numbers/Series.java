@@ -2,7 +2,7 @@ package com.numbers;
 
 public class Series {
 
-    public static long nSum(int n){
+    public static long nSum(int n){ // metodai turi buti statiniai kad galima butu prieiti is .jar failo;
        return (n*(n+1))/2;
     }
     // factorialai
@@ -36,3 +36,26 @@ public class Series {
 }
 // po to sukuriam .jar faila File -> Project structure -> Artifacts -> + ->...
 
+// po to sukuriam nauja paketa, pridedam sukurta .jar faila ir panaudojam 'static method' gauti rezultata;
+//pvz. apacioje;
+
+//package com.example.test;
+//
+//        import com.numbers.Series; // importuojam paketa is Series clases, kad pasiekti metodus;
+//
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        for (int i=0; i<=10; i++){
+//            System.out.println(Series.nSum(i));
+//        }
+//        System.out.println("++++++++++++++++++");
+//        for (int i=0; i<=10; i++){
+//            System.out.println(Series.factorial(i));
+//        }
+//        System.out.println("++++++++++++++++++");
+//        for (int i=0; i<=10; i++){
+//            System.out.println(Series.fibonacci(i));
+//        }
+//    }
+//}
