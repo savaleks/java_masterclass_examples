@@ -7,6 +7,7 @@ public class Sample1 {
         char a;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Iveskite simbolius, 'q' -  jeigu norite iseiti.");
+        //skaityti simbolius;
         do {
             a = (char) br.read();
             System.out.println(a);
